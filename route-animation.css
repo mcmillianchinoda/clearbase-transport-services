@@ -1,0 +1,32 @@
+.scene-hero{position:relative;background:#101f33;color:#f5f8fb;min-height:720px;overflow:hidden}
+.scene-hero:before{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,#101f33 0%,#101f33f0 23%,#101f33b5 39%,#101f3300 68%);pointer-events:none}
+.scene-hero .wrap{position:relative;z-index:3;min-height:720px;align-items:center}
+.scene-hero .hero-copy{max-width:485px;padding:80px 0 100px}
+.scene-hero .hero-copy h1{font-size:clamp(42px,5vw,66px);line-height:1.04}
+.scene-hero .hero-copy p{color:#dae6ee;font-size:18px;max-width:410px}
+.scene-hero .hero-meta{color:#a9bac9}
+.scene-hero .scene-secondary{background:#ffffff14;color:#fff;border-color:#a5bac9}
+.scene-hero .scene-secondary:hover{background:#ffffff2a}
+.scene{position:absolute;inset:0;overflow:hidden;perspective:1200px;background:radial-gradient(ellipse at 75% 36%,#245277,#0e2035 78%)}
+.scene-map{position:absolute;inset:-9% -9% -15% 18%;background:radial-gradient(ellipse at 75% 45%,#234d6f,#152c46 56%,#10243a);border:1px solid #48647a;box-shadow:0 38px 55px #07121e91,0 7px 0 #091827;transform:rotateX(22deg) rotateZ(-6deg) scale(1.08);transform-origin:65% 45%;overflow:hidden}
+.scene-map:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#c5e3fa0b 1px,transparent 1px),linear-gradient(90deg,#c5e3fa0b 1px,transparent 1px);background-size:56px 56px}
+.scene-roads{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.scene-roads .contour{fill:none;stroke:#6d9abb45;stroke-width:2}
+.scene-roads .secondary-road{fill:none;stroke:#486077;stroke-width:18;filter:url(#road-shadow)}
+.scene-roads .main-road{fill:none;stroke:#7b8895;stroke-width:39;filter:url(#road-shadow)}
+.scene-roads .service-road{fill:none;stroke:#687c8c;stroke-width:27;filter:url(#road-shadow)}
+.scene-roads .lastmile-road{fill:none;stroke:#617b8d;stroke-width:19;filter:url(#road-shadow)}
+.scene-roads .sea-channel{fill:none;stroke:#1a668d;stroke-width:86;stroke-linecap:round;opacity:.62}
+.scene-roads .sea-route{fill:none;stroke:#74c9e1;stroke-width:2;stroke-dasharray:8 13;opacity:.85}
+.scene-roads .air-route{fill:none;stroke:#d5e9f6;stroke-width:2;stroke-dasharray:5 13;opacity:.9}
+.scene-roads .hub{fill:#eaf5fa;stroke:#27475c;stroke-width:5;filter:url(#node-shadow)}
+.scene-roads .small-hub{fill:#eaf5fa;stroke:#52728a;stroke-width:4;filter:url(#node-shadow)}
+.route-stamp{position:absolute;font-size:11px;font-weight:850;letter-spacing:.13em;color:#e9f2f7;background:#132d46e8;border:1px solid #668397;padding:7px 9px;box-shadow:0 4px 10px #08182750;white-space:nowrap}
+.stamp-one{left:18%;top:73%}.stamp-two{left:62%;top:39%}.stamp-three{right:8%;top:14%}
+.sea-stamp{left:73%;top:84%;border-color:#63c1df;color:#daf6ff}
+.route-vehicle{position:absolute;left:0;top:0;z-index:2;object-fit:contain;transform-origin:50% 50%;filter:drop-shadow(7px 11px 5px #050e1ca6);will-change:left,top,transform}
+.freight-model{width:11.5%}.van-model{width:7.7%}.bike-model{width:4.8%}.ship-model{width:20%;z-index:5;filter:drop-shadow(9px 13px 8px #041521b8)}.plane-model{width:12%;z-index:4;filter:drop-shadow(13px 18px 9px #0815259c)}
+.scene-note{position:absolute;right:26px;bottom:21px;z-index:3;color:#d5e4ee;background:#102b45df;padding:7px 11px;font-size:11px;letter-spacing:.07em}
+@media(max-width:900px){.scene-hero,.scene-hero .wrap{min-height:830px}.scene-hero:before{background:linear-gradient(180deg,#101f33 0%,#101f33ec 25%,#101f3300 55%)}.scene-hero .wrap{align-items:flex-start}.scene-hero .hero-copy{padding:48px 0 0;max-width:560px}.scene-map{inset:31% -24% -7% -13%;transform:rotateX(18deg) rotateZ(-6deg) scale(1.03)}.freight-model{width:13%}.van-model{width:9%}.bike-model{width:6%}.ship-model{width:20%}.plane-model{width:14%}}
+@media(max-width:600px){.scene-hero,.scene-hero .wrap{min-height:800px}.scene-hero .hero-copy{padding-top:30px}.scene-hero .hero-copy h1{font-size:43px;margin:12px 0 15px}.scene-hero .hero-copy p{font-size:16px;margin-bottom:23px}.scene-hero .hero-meta{bottom:19px}.scene-map{inset:35% -45% 2% -45%;transform:rotateX(15deg) rotateZ(-6deg)}.route-stamp{font-size:8px;padding:4px 5px}.sea-stamp{left:71%;top:83%}.scene-note{right:8px;bottom:54px;font-size:9px}.freight-model{width:12%}.ship-model{width:22%}}
+@media(prefers-reduced-motion:reduce){.route-vehicle{transition:none!important}}

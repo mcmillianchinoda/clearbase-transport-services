@@ -24,7 +24,7 @@
     if(get('pickupDate'))lines.push(`Preferred pickup date: ${get('pickupDate')}`);
     if(get('mode'))lines.push(`Transport preference: ${get('mode')}`);
     if(get('notes'))lines.push(`Other instructions: ${get('notes')}`);
-    const url=`https://wa.me/263772185946?text=${encodeURIComponent(lines.join('\n'))}`;
+    const url=`https://wa.me/263710901681?text=${encodeURIComponent(lines.join('\n'))}`;
     const opened=window.open('about:blank','_blank');
     if(opened){opened.opener=null;opened.location.href=url;}
     else window.location.href=url;
